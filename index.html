@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenCode Complete | 26-Letter Unicase Typeface Specimen (Edition 2.100)</title>
+<style>
+  @font-face {
+    font-family: "OpenCodeComplete";
+    src: url("data:font/ttf;base64,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") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+  }
+  :root {
+    --bg: #0a0a0a;
+    --panel: #111111;
+    --panel-alt: #161616;
+    --border: #242424;
+    --border-hi: #383838;
+    --ink: #f5f5f5;
+    --shade: #3d3d3d;
+    --muted: #888888;
+    --orig: #3b82f6;
+    --new: #10b981;
+    --wide: #f59e0b;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: ui-monospace, SFMono-Regular, "JetBrains Mono", Menlo, Monaco, Consolas, monospace;
+    -webkit-font-smoothing: antialiased;
+  }
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 28px;
+    background: rgba(10, 10, 10, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+    letter-spacing: 0.05em;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+  }
+  .brand svg { width: 20px; height: 25px; }
+  .nav-links { display: flex; gap: 16px; flex-wrap: wrap; }
+  .nav-links a { color: var(--muted); text-decoration: none; }
+  .nav-links a:hover { color: var(--ink); }
+  .actions { display: flex; gap: 10px; flex-shrink: 0; }
+  .btn {
+    background: var(--ink);
+    color: var(--bg);
+    border: 1px solid var(--ink);
+    padding: 7px 14px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .btn.secondary {
+    background: transparent;
+    color: var(--ink);
+    border-color: var(--border-hi);
+  }
+  main {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 28px 80px;
+  }
+  .hero {
+    padding: 48px 0 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .hero-kicker {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--muted);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .hero-stage {
+    min-height: 180px;
+    padding: 28px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+  }
+  .word-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    align-items: center;
+  }
+  .hero-controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+    align-items: center;
+  }
+  .hero-input {
+    flex: 1;
+    min-width: 280px;
+    background: #050505;
+    color: var(--ink);
+    border: 1px solid var(--border-hi);
+    padding: 12px 16px;
+    font-family: inherit;
+    font-size: 15px;
+    outline: none;
+  }
+  .preset-pills { display: flex; gap: 8px; flex-wrap: wrap; }
+  .pill {
+    background: var(--panel-alt);
+    color: var(--muted);
+    border: 1px solid var(--border);
+    padding: 7px 12px;
+    font-family: inherit;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .pill:hover, .pill.active {
+    color: var(--ink);
+    border-color: var(--ink);
+  }
+  .plate {
+    padding: 44px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .plate-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .plate-title { display: flex; align-items: baseline; gap: 14px; }
+  .plate-num { color: var(--orig); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; }
+  .plate-title h2 { margin: 0; font-size: 22px; }
+  .plate-sub { color: var(--muted); font-size: 12px; }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+    gap: 1px;
+    background: var(--border);
+    border: 1px solid var(--border);
+  }
+  .stat-cell { background: var(--panel); padding: 18px 20px; }
+  .stat-val { font-size: 26px; font-weight: 700; margin-bottom: 4px; }
+  .stat-lbl { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .lab-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 20px;
+  }
+  @media (max-width: 960px) { .lab-grid { grid-template-columns: 1fr; } }
+  .lab-box { background: var(--panel); border: 1px solid var(--border); padding: 22px; }
+  .letter-picker { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 16px; }
+  .l-btn {
+    width: 36px;
+    height: 36px;
+    background: var(--bg);
+    color: var(--ink);
+    border: 1px solid var(--border);
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 13px;
+    cursor: pointer;
+    position: relative;
+  }
+  .l-btn.orig::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 5px;
+    height: 5px;
+    background: var(--orig);
+  }
+  .l-btn.wide::after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 5px;
+    height: 5px;
+    background: var(--wide);
+  }
+  .l-btn.active { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .stage-split { display: flex; gap: 22px; align-items: flex-start; flex-wrap: wrap; }
+  .cons-svg {
+    width: 240px;
+    height: 320px;
+    background: #070707;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .cons-info { flex: 1; min-width: 230px; }
+  .passport-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+    gap: 16px;
+  }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+  }
+  .card:hover { border-color: var(--border-hi); }
+  .card.orig { border-color: rgba(59, 130, 246, 0.55); }
+  .card.wide { border-color: rgba(245, 158, 11, 0.55); }
+  .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 14px;
+  }
+  .badge { font-size: 10px; font-weight: 700; padding: 2px 6px; letter-spacing: 0.05em; }
+  .badge.orig { background: rgba(59, 130, 246, 0.15); color: var(--orig); border: 1px solid var(--orig); }
+  .badge.new { background: rgba(16, 185, 129, 0.15); color: var(--new); border: 1px solid var(--new); }
+  .badge.wide { background: rgba(245, 158, 11, 0.15); color: var(--wide); border: 1px solid var(--wide); }
+  .card-body { display: flex; gap: 16px; align-items: center; margin-bottom: 12px; }
+  .passport-svg {
+    width: 116px;
+    height: 148px;
+    background: #070707;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+  }
+  .kv-list { font-size: 11px; line-height: 1.65; color: var(--muted); flex: 1; }
+  .kv-list strong { color: var(--ink); }
+  .rule-desc {
+    font-size: 11px;
+    color: #a8a8a8;
+    line-height: 1.45;
+    padding-top: 10px;
+    border-top: 1px solid var(--border);
+    margin-top: auto;
+  }
+  .waterfall-row {
+    display: flex;
+    align-items: baseline;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #191919;
+    overflow-x: auto;
+  }
+  .wf-size { width: 60px; font-size: 11px; color: var(--muted); flex-shrink: 0; }
+  .wf-text { font-family: "OpenCodeComplete", monospace; white-space: nowrap; }
+  .live-textarea {
+    width: 100%;
+    min-height: 170px;
+    background: var(--panel);
+    color: var(--ink);
+    border: 1px solid var(--border-hi);
+    padding: 22px;
+    font-family: "OpenCodeComplete", monospace;
+    font-size: 40px;
+    line-height: 1.4;
+    outline: none;
+  }
+</style>
+</head>
+<body>
+
+<nav class="topbar">
+  <div class="brand">
+    <svg viewBox="0 0 24 30">
+      <path d="M18 24H6V12H18V24Z" fill="#3d3d3d"/>
+      <path d="M18 6H6V24H18V6ZM24 30H0V0H24V30Z" fill="#f5f5f5"/>
+    </svg>
+    <span>OPENCODE COMPLETE · EDITION 2.100 (5×7 WIDE W &amp; M)</span>
+  </div>
+  <div class="nav-links">
+    <a href="#specimen">01 Specimen</a>
+    <a href="#construction">02 Customizer Lab</a>
+    <a href="#passports">03 Passports (26)</a>
+    <a href="#waterfall">04 Waterfall</a>
+    <a href="#tester">05 Type Tester</a>
+  </div>
+  <div class="actions">
+    <a class="btn secondary" download="glyphs.mjs" href="data:text/javascript;base64,Ly8gQ29tcGxldGUgMjYtbGV0dGVyIFVuaWNhc2UgQWxwaGFiZXQgZm9yIE9wZW5Db2RlIChFZGl0aW9uIDIuMTAwKS4KLy8gU3RhbmRhcmQgbGV0dGVycyB1c2UgNHg3IG1vZHVsZXMgKDI0eDQyIFNWRyB1bml0cywgNjAwdSBhZHZhbmNlKTsgd2lkZSAzLXN0ZW0gbGV0dGVycyAobSwgdykgdXNlIDV4NyBtb2R1bGVzICgrMSBtb2R1bGUgd2lkdGgsIDMweDQyIFNWRyB1bml0cywgNzIwdSBhZHZhbmNlKTsgbmFycm93IHNlcmlmZWQgc3RlbXMgKGksIGwpIHVzZSAzeDcgbW9kdWxlcyAoMTh4NDIgU1ZHIHVuaXRzLCA0ODB1IGFkdmFuY2UpLgpleHBvcnQgY29uc3QgR0xZUEhTID0gewogIGE6IHsgY29sczogNCwgYWR2YW5jZVdpZHRoOiA2MDAsIHNoYWRvdzogJ002IDI0SDE4VjMwSDZaJywgaW5rOiAnTTAgNkgyNFYzNkgwVjE4SDE4VjEySDBaTTYgMjRWMzBIMThWMjRaJyB9LAogIGI6IHsgY29sczogNCwgYWR2YW5jZVdpZHRoOiA2MDAsIHNoYWRvdzogJ002IDE4SDE4VjMwSDZaJywgaW5rOiAnTTAgMEg2VjZIMjRWMzZIMFpNNiAxMlYzMEgxOFYxMlonIH0sCiAgYzogeyBjb2xzOiA0LCBhZHZhbmNlV2lkdGg6IDYwMCwgc2hhZG93OiAnTTI0IDMwSDZWMThIMjRWMzBaJywgaW5rOiAnTTI0IDEySDZWMzBIMjRWMzZIMFY2SDI0VjEyWicgfSwKICBkOiB7IGNvbHM6IDQsIGFkdmFuY2VXaWR0aDogNjAwLCBzaGFkb3c6ICdNMTggMzBINlYxOEgxOFYzMFonLCBpbms6ICdNMTggMTJINlYzMEgxOFYxMlpNMjQgMzZIMFY2SDE4VjBIMjRWMzZaJyB9LAogIGU6IHsgY29sczogNCwgYWR2YW5jZVdpZHRoOiA2MDAsIHNoYWRvdzogJ00yNCAyNFYzMEg2VjI0SDI0WicsIGluazogJ00yNCAyNEg2VjMwSDI0VjM2SDBWNkgyNFYyNFpNNiAxOEgxOFYxMkg2VjE4WicgfSwKICBmOiB7IGNvbHM6IDQsIGFkdmFuY2VXaWR0aDogNjAwLCBzaGFkb3c6ICdNMTIgMThIMjRWMzBIMTJaJywgaW5rOiAnTTAgMTJINlYwSDI0VjZIMTJWMTJIMThWMThIMTJWMzZINlYxOEgwWicgfSwKICBnOiB7IGNvbHM6IDQsIGFkdmFuY2VXaWR0aDogNjAwLCBzaGFkb3c6ICdNNiAxOEgxOFYyNEg2WicsIGluazogJ00wIDZIMjRWNDJIMFYzNkgxOFYzMEgwWk02IDEyVjI0SDE4VjEyWicgfSwKICBoOiB7IGNvbHM6IDQsIGFkdmFuY2VXaWR0aDogNjAwLCBzaGFkb3c6ICdNNiAxOEgxOFYzNkg2WicsIGluazogJ00wIDBINlY2SDE4VjEySDZWMzZIMFpNMTggMTJIMjRWMzZIMThaJyB9LAogIGk6IHsgY29sczogMywgYWR2YW5jZVdpZHRoOiA0ODAsIHNoYWRvdzogJ00xMiAxOEgxOFYzMEgxMlonLCBpbms6ICdNMCAxMkgxMlYzMEgxOFYzNkgwVjMwSDZWMThIMFpNNiAwSDEyVjZINlonIH0sCiAgajogeyBjb2xzOiA0LCBhZHZhbmNlV2lkdGg6IDYwMCwgc2hhZG93OiAnTTYgMThIMThWMzZINlonLCBpbms6ICdNMCAzMEg2VjM2SDE4VjE4SDEyVjEySDI0VjQySDBaTTE4IDBIMjRWNkgxOFonIH0sCiAgazogeyBjb2xzOiA0LCBhZHZhbmNlV2lkdGg6IDYwMCwgc2hhZG93OiAnTTYgMjRIMThWMzZINlonLCBpbms6ICdNMCAwSDZWMThIMThWMjRINlYzNkgwWk0xOCA2SDI0VjE4SDE4Wk0xOCAyNEgyNFYzNkgxOFonIH0sCiAgbDogeyBjb2xzOiAzLCBhZHZhbmNlV2lkdGg6IDQ4MCwgc2hhZG93OiAnTTEyIDE4SDE4VjMwSDEyWicsIGluazogJ00wIDBIMTJWMzBIMThWMzZIMFYzMEg2VjZIMFonIH0sCiAgbTogeyBjb2xzOiA1LCBhZHZhbmNlV2lkdGg6IDcyMCwgc2hhZG93OiAnTTYgMThIMTJWMzZINlpNMTggMThIMjRWMzZIMThaJywgaW5rOiAnTTAgNkgyNFYxMkgxOFYzNkgxMlYxMkg2VjM2SDBaTTI0IDEySDMwVjM2SDI0WicgfSwKICBuOiB7IGNvbHM6IDQsIGFkdmFuY2VXaWR0aDogNjAwLCBzaGFkb3c6ICdNMTggMzZINlYxOEgxOFYzNlonLCBpbms6ICdNMTggMTJINlYzNkgwVjZIMThWMTJaTTI0IDM2SDE4VjEySDI0VjM2WicgfSwKICBvOiB7IGNvbHM6IDQsIGFkdmFuY2VXaWR0aDogNjAwLCBzaGFkb3c6ICdNMTggMzBINlYxOEgxOFYzMFonLCBpbms6ICdNMTggMTJINlYzMEgxOFYxMlpNMjQgMzZIMFY2SDI0VjM2WicgfSwKICBwOiB7IGNvbHM6IDQsIGFkdmFuY2VXaWR0aDogNjAwLCBzaGFkb3c6ICdNMTggMzBINlYxOEgxOFYzMFonLCBpbms6ICdNNiAzMEgxOFYxMkg2VjMwWk0yNCAzNkg2VjQySDBWNkgyNFYzNlonIH0sCiAgcTogeyBjb2xzOiA0LCBhZHZhbmNlV2lkdGg6IDYwMCwgc2hhZG93OiAnTTYgMThIMThWMzBINlonLCBpbms6ICdNMCA2SDI0VjQySDE4VjM2SDBaTTYgMTJWMzBIMThWMTJaJyB9LAogIHI6IHsgY29sczogNCwgYWR2YW5jZVdpZHRoOiA2MDAsIHNoYWRvdzogJ002IDE4SDE4VjM2SDZaJywgaW5rOiAnTTAgNkgxOFYxMkg2VjM2SDBaTTE4IDEySDI0VjE4SDE4WicgfSwKICBzOiB7IGNvbHM6IDQsIGFkdmFuY2VXaWR0aDogNjAwLCBzaGFkb3c6ICdNMCAyNEgxOFYzMEgwWicsIGluazogJ00wIDZIMjRWMTJINlYxOEgyNFYzNkgwVjMwSDE4VjI0SDBaJyB9LAogIHQ6IHsgY29sczogNCwgYWR2YW5jZVdpZHRoOiA2MDAsIHNoYWRvdzogJ00xMiAxOEgyNFYzMEgxMlonLCBpbms6ICdNMCA2SDZWMEgxMlY2SDE4VjEySDEyVjMwSDI0VjM2SDZWMTJIMFonIH0sCiAgdTogeyBjb2xzOiA0LCBhZHZhbmNlV2lkdGg6IDYwMCwgc2hhZG93OiAnTTYgMThIMThWMzBINlonLCBpbms6ICdNMCA2SDZWMzBIMFpNNiAzMEgxOFY2SDI0VjM2SDZaJyB9LAogIHY6IHsgY29sczogNCwgYWR2YW5jZVdpZHRoOiA2MDAsIHNoYWRvdzogJ002IDE4SDE4VjMwSDZaJywgaW5rOiAnTTAgNkg2VjMwSDBaTTYgMzBIMThWMzZINlpNMTggNkgyNFYzMEgxOFonIH0sCiAgdzogeyBjb2xzOiA1LCBhZHZhbmNlV2lkdGg6IDcyMCwgc2hhZG93OiAnTTYgMThIMTJWMzBINlpNMTggMThIMjRWMzBIMThaJywgaW5rOiAnTTAgNkg2VjMwSDBaTTYgMzBIMTJWMzZINlpNMTIgMTJIMThWMzBIMTJaTTE4IDMwSDI0VjM2SDE4Wk0yNCA2SDMwVjMwSDI0WicgfSwKICB4OiB7IGNvbHM6IDQsIGFkdmFuY2VXaWR0aDogNjAwLCBzaGFkb3c6ICdNNiAyNEgxOFYzNkg2WicsIGluazogJ00wIDZINlYxOEgwWk0wIDI0SDZWMzZIMFpNNiAxOEgxOFYyNEg2Wk0xOCA2SDI0VjE4SDE4Wk0xOCAyNEgyNFYzNkgxOFonIH0sCiAgeTogeyBjb2xzOiA0LCBhZHZhbmNlV2lkdGg6IDYwMCwgc2hhZG93OiAnTTYgMThIMThWMjRINlonLCBpbms6ICdNMCA2SDZWMjRIMFpNMCAzNkgxOFYzMEg2VjI0SDE4VjZIMjRWNDJIMFonIH0sCiAgejogeyBjb2xzOiA0LCBhZHZhbmNlV2lkdGg6IDYwMCwgc2hhZG93OiAnTTYgMjRIMjRWMzBINlonLCBpbms6ICdNMCA2SDI0VjE4SDE4VjEySDBaTTAgMjRINlYzMEgyNFYzNkgwWk02IDE4SDE4VjI0SDZaJyB9LAp9Owo=">glyphs.mjs</a>
+    <a class="btn" download="OpenCode-Complete.ttf" href="data:font/ttf;base64,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">Download OpenCode-Complete.ttf ↓</a>
+  </div>
+</nav>
+
+<main>
+  <!-- HERO WORDMARK TYPEWRITER -->
+  <section class="hero" id="specimen">
+    <div class="hero-kicker">
+      <span>26 UNICASE LETTERS · 4×7 STANDARD + 5×7 WIDE (w, m) + 3×7 TRIM (i, l)</span>
+      <span>1 MODULE = 120u · UNIFORM 120u GAP · 0 CURVES · 0 DIAGONALS</span>
+    </div>
+    <div class="hero-stage" id="heroStage"></div>
+    <div class="hero-controls">
+      <input class="hero-input" id="heroInput" value="the quick brown fox jumps over the lazy dog" placeholder="Type any word to render in two-tone modular SVG..." />
+      <div class="preset-pills">
+        <button class="pill active" data-text="the quick brown fox jumps over the lazy dog">pangram (brown / jumps / lazy)</button>
+        <button class="pill" data-text="opencode complete">opencode complete</button>
+        <button class="pill" data-text="abcdefghijklmnopqrstuvwxyz">a–z alphabet</button>
+        <button class="pill" data-text="www.opencode.ai">www.opencode.ai</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- PL. 01 SPECIMEN OVERVIEW -->
+  <section class="plate">
+    <div class="plate-header">
+      <div class="plate-title">
+        <span class="plate-num">PL. 01 / 05</span>
+        <h2>Specimen &amp; Proportional Module System</h2>
+      </div>
+      <div class="plate-sub">Wide 3-stem letters (w, m) expand by +1 module width (5×7 = 720u advance); narrow stems (i, l) trim by -1 module (3×7 = 480u advance)</div>
+    </div>
+    <div class="stats-grid">
+      <div class="stat-cell"><div class="stat-val">26</div><div class="stat-lbl">Unicase Letters (a–z / A–Z)</div></div>
+      <div class="stat-cell"><div class="stat-val">5 × 7</div><div class="stat-lbl">+1 Module Width for w &amp; m</div></div>
+      <div class="stat-cell"><div class="stat-val">3 × 7</div><div class="stat-lbl">-1 Module Trim for i &amp; l</div></div>
+      <div class="stat-cell"><div class="stat-val">120u</div><div class="stat-lbl">1:1 Stroke Width (σ = 0)</div></div>
+      <div class="stat-cell"><div class="stat-val">120u</div><div class="stat-lbl">Uniform Inter-Letter Gap</div></div>
+      <div class="stat-cell"><div class="stat-val">0</div><div class="stat-lbl">Curves, Diagonals &amp; 2×2 Blocks</div></div>
+    </div>
+  </section>
+
+  <!-- PL. 02 INTERACTIVE CONSTRUCTION, VARIANT SWITCHER & PIXEL EDITOR -->
+  <section class="plate" id="construction">
+    <div class="plate-header">
+      <div class="plate-title">
+        <span class="plate-num">PL. 02 / 05</span>
+        <h2>Interactive Blueprint, Variant Switcher &amp; Live Pixel Editor</h2>
+      </div>
+      <div class="plate-sub">Click any letter (try w or m), switch between design variants, or click any module cell in the grid to toggle Ink / Shade / Empty live!</div>
+    </div>
+
+    <div class="letter-picker" id="letterPicker"></div>
+
+    <div class="lab-grid">
+      <div class="lab-box">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;flex-wrap:wrap;gap:8px;">
+          <strong id="consTitle" style="font-size:14px;">Letter w · Blueprint</strong>
+          <div style="display:flex;gap:8px;align-items:center;font-size:12px;">
+            <span>Width:</span>
+            <button class="pill" id="wBtn3">3×7</button>
+            <button class="pill" id="wBtn4">4×7</button>
+            <button class="pill" id="wBtn5">5×7</button>
+          </div>
+        </div>
+        <div id="variantBar" class="preset-pills" style="margin-bottom:14px;"></div>
+        <div class="stage-split">
+          <svg class="cons-svg" id="consSvg" viewBox="-4 -3 38 48" title="Click any cell to cycle Empty -> Ink -> Shade"></svg>
+          <div class="cons-info" id="consInfo"></div>
+        </div>
+      </div>
+
+      <div class="lab-box">
+        <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+          <strong style="font-size:14px;">30° Isometric Exploded View</strong>
+          <div style="display:flex;gap:8px;align-items:center;font-size:12px;">
+            <span>Lift:</span>
+            <input type="range" id="isoSlider" min="0" max="100" value="55" style="width:110px;">
+          </div>
+        </div>
+        <canvas id="isoCanvas" width="540" height="320" style="width:100%;height:320px;background:#070707;border:1px solid var(--border);"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- PL. 03 ALL 26 GLYPH PASSPORTS -->
+  <section class="plate" id="passports">
+    <div class="plate-header">
+      <div class="plate-title">
+        <span class="plate-num">PL. 03 / 05</span>
+        <h2>Glyph Passports (No. 001 – No. 026)</h2>
+      </div>
+      <div class="preset-pills" id="filterPills">
+        <button class="pill active" data-filter="all">All 26 Letters</button>
+        <button class="pill" data-filter="orig">Original 6 (o, p, e, n, c, d)</button>
+        <button class="pill" data-filter="wide">Proportional Width (w, m, i, l)</button>
+        <button class="pill" data-filter="new">All Completed (20)</button>
+      </div>
+    </div>
+    <div class="passport-grid" id="passportGrid"></div>
+  </section>
+
+  <!-- PL. 04 WATERFALL -->
+  <section class="plate" id="waterfall">
+    <div class="plate-header">
+      <div class="plate-title">
+        <span class="plate-num">PL. 04 / 05</span>
+        <h2>Pixel-Aligned Waterfall (Multiples of 7px)</h2>
+      </div>
+      <div class="plate-sub">Rendered live via @font-face from compiled OpenCode-Complete.ttf (with 5×7 w &amp; m and 3×7 i &amp; l)</div>
+    </div>
+    <div id="waterfallContainer"></div>
+  </section>
+
+  <!-- PL. 05 LIVE TYPE TESTER -->
+  <section class="plate" id="tester">
+    <div class="plate-header">
+      <div class="plate-title">
+        <span class="plate-num">PL. 05 / 05</span>
+        <h2>Live OpenType Font Tester</h2>
+      </div>
+      <div class="plate-sub">Type below using the compiled OpenCode-Complete.ttf font (unicase A–Z / a–z)</div>
+    </div>
+    <textarea class="live-textarea" spellcheck="false">the quick brown fox jumps over the lazy dog
+opencode complete 26 unicase letters</textarea>
+  </section>
+</main>
+
+<script>
+const GLYPHS = {"a": {"letter": "a", "codepoint": "U+0061 / U+0041", "origin": "Derived (180\u00b0 inversion of e)", "family": "Double-storey x-height (e-family)", "rule": "Inverted e: top arch at row 1, upper-left aperture at row 2, midline crossbar at row 3, closed lower bowl in rows 3..5 with 2 shade modules at row 4.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "####", "...#", "####", "#SS#", "####", "...."], "variants": {"Default (Inverted e)": ["....", "####", "...#", "####", "#SS#", "####", "...."], "Notched Top-Left (.###)": ["....", ".###", "...#", "####", "#SS#", "####", "...."]}, "ink_count": 15, "shade_count": 2, "counter_xheight": 5, "ink_xheight": 15, "total_xheight": 20, "coverage_pct": 53.6, "contours_count": 2, "points_count": 12, "lr_symmetry_pct": 93, "tb_symmetry_pct": 93, "svg_ink": "M0 6H24V36H0V18H18V12H0ZM6 24V30H18V24Z", "svg_shadow": "M6 24H18V30H6Z", "svg_contours": [[[0, 6], [24, 6], [24, 36], [0, 36], [0, 18], [18, 18], [18, 12], [0, 12]], [[6, 24], [6, 30], [18, 30], [18, 24]]], "font_contours": [[[60, 600], [540, 600], [540, 0], [60, 0], [60, 360], [420, 360], [420, 480], [60, 480]], [[180, 240], [180, 120], [420, 120], [420, 240]]]}, "b": {"letter": "b", "codepoint": "U+0062 / U+0042", "origin": "Derived (horizontal mirror of d / vertical mirror of p)", "family": "Bowl + stem quartet (o/p/d/b/q)", "rule": "Canonical o-bowl in rows 1..5 plus 1-module ascender at (col 0, row 0). Shade fills lower counter (cols 1..2, rows 3..4).", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["#...", "####", "#..#", "#SS#", "#SS#", "####", "...."], "variants": {"Canonical (4\u00d77)": ["#...", "####", "#..#", "#SS#", "#SS#", "####", "...."]}, "ink_count": 15, "shade_count": 4, "counter_xheight": 6, "ink_xheight": 14, "total_xheight": 20, "coverage_pct": 53.6, "contours_count": 2, "points_count": 10, "lr_symmetry_pct": 93, "tb_symmetry_pct": 67, "svg_ink": "M0 0H6V6H24V36H0ZM6 12V30H18V12Z", "svg_shadow": "M6 18H18V30H6Z", "svg_contours": [[[0, 0], [6, 0], [6, 6], [24, 6], [24, 36], [0, 36]], [[6, 12], [6, 30], [18, 30], [18, 12]]], "font_contours": [[[60, 720], [180, 720], [180, 600], [540, 600], [540, 0], [60, 0]], [[180, 480], [180, 120], [420, 120], [420, 480]]]}, "c": {"letter": "c", "codepoint": "U+0063 / U+0043", "origin": "OpenCode wordmark (No. 005)", "family": "Open aperture (c-family)", "rule": "o-bowl with right wall (col 3, rows 2..4) opened. Shade expands across cols 1..3 in rows 3..4 (6 modules).", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "####", "#...", "#SSS", "#SSS", "####", "...."], "variants": {"Canonical (4\u00d77)": ["....", "####", "#...", "#SSS", "#SSS", "####", "...."]}, "ink_count": 11, "shade_count": 6, "counter_xheight": 9, "ink_xheight": 11, "total_xheight": 20, "coverage_pct": 39.3, "contours_count": 1, "points_count": 8, "lr_symmetry_pct": 73, "tb_symmetry_pct": 100, "svg_ink": "M24 12H6V30H24V36H0V6H24V12Z", "svg_shadow": "M24 30H6V18H24V30Z", "svg_contours": [[[0, 6], [24, 6], [24, 12], [6, 12], [6, 30], [24, 30], [24, 36], [0, 36]]], "font_contours": [[[60, 600], [540, 600], [540, 480], [180, 480], [180, 120], [540, 120], [540, 0], [60, 0]]]}, "d": {"letter": "d", "codepoint": "U+0064 / U+0044", "origin": "OpenCode wordmark (No. 006)", "family": "Bowl + stem quartet (o/p/d/b/q)", "rule": "Canonical o-bowl in rows 1..5 plus 1-module ascender at (col 3, row 0). Shade fills lower counter (cols 1..2, rows 3..4).", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["...#", "####", "#..#", "#SS#", "#SS#", "####", "...."], "variants": {"Canonical (4\u00d77)": ["...#", "####", "#..#", "#SS#", "#SS#", "####", "...."]}, "ink_count": 15, "shade_count": 4, "counter_xheight": 6, "ink_xheight": 14, "total_xheight": 20, "coverage_pct": 53.6, "contours_count": 2, "points_count": 10, "lr_symmetry_pct": 93, "tb_symmetry_pct": 67, "svg_ink": "M18 12H6V30H18V12ZM24 36H0V6H18V0H24V36Z", "svg_shadow": "M18 30H6V18H18V30Z", "svg_contours": [[[0, 6], [18, 6], [18, 0], [24, 0], [24, 36], [0, 36]], [[6, 12], [6, 30], [18, 30], [18, 12]]], "font_contours": [[[60, 600], [420, 600], [420, 720], [540, 720], [540, 0], [60, 0]], [[180, 480], [180, 120], [420, 120], [420, 480]]]}, "e": {"letter": "e", "codepoint": "U+0065 / U+0045", "origin": "OpenCode wordmark (No. 003)", "family": "Double-storey x-height (e-family)", "rule": "Closed upper eye (cols 1..2, row 2), midline crossbar at row 3, open lower aperture (cols 1..3, row 4) filled with 3 shade modules.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "####", "#..#", "####", "#SSS", "####", "...."], "variants": {"Canonical (4\u00d77)": ["....", "####", "#..#", "####", "#SSS", "####", "...."]}, "ink_count": 15, "shade_count": 3, "counter_xheight": 5, "ink_xheight": 15, "total_xheight": 20, "coverage_pct": 53.6, "contours_count": 2, "points_count": 12, "lr_symmetry_pct": 93, "tb_symmetry_pct": 93, "svg_ink": "M24 24H6V30H24V36H0V6H24V24ZM6 18H18V12H6V18Z", "svg_shadow": "M24 24V30H6V24H24Z", "svg_contours": [[[0, 6], [24, 6], [24, 24], [6, 24], [6, 30], [24, 30], [24, 36], [0, 36]], [[6, 12], [6, 18], [18, 18], [18, 12]]], "font_contours": [[[60, 600], [540, 600], [540, 240], [180, 240], [180, 120], [540, 120], [540, 0], [60, 0]], [[180, 480], [180, 360], [420, 360], [420, 480]]]}, "f": {"letter": "f", "codepoint": "U+0066 / U+0046", "origin": "Derived (ascender arch + high crossbar)", "family": "Ascender crossbar pair (f/t)", "rule": "Stem at col 1, top arch overhanging right at row 0 (cols 1..3), crossbar at row 2 (cols 0..2), 4 shade modules under crossbar in cols 2..3, rows 3..4.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": [".###", ".#..", "###.", ".#SS", ".#SS", ".#..", "...."], "variants": {"High Crossbar (Row 2)": [".###", ".#..", "###.", ".#SS", ".#SS", ".#..", "...."], "Midline Crossbar (Row 3)": [".###", ".#..", ".#..", "####", ".#SS", ".#SS", "...."]}, "ink_count": 10, "shade_count": 4, "counter_xheight": 13, "ink_xheight": 7, "total_xheight": 20, "coverage_pct": 35.7, "contours_count": 1, "points_count": 14, "lr_symmetry_pct": 40, "tb_symmetry_pct": 60, "svg_ink": "M0 12H6V0H24V6H12V12H18V18H12V36H6V18H0Z", "svg_shadow": "M12 18H24V30H12Z", "svg_contours": [[[0, 12], [6, 12], [6, 0], [24, 0], [24, 6], [12, 6], [12, 12], [18, 12], [18, 18], [12, 18], [12, 36], [6, 36], [6, 18], [0, 18]]], "font_contours": [[[60, 480], [180, 480], [180, 720], [540, 720], [540, 600], [300, 600], [300, 480], [420, 480], [420, 360], [300, 360], [300, 0], [180, 0], [180, 360], [60, 360]]]}, "g": {"letter": "g", "codepoint": "U+0067 / U+0047", "origin": "Derived (raised bowl + hooked descender loop)", "family": "Descender loop (g/y)", "rule": "Closed upper bowl in rows 1..4 (shaded at row 3, cols 1..2), right stem descending through row 5 into full 1-module descender hook at row 6.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "####", "#..#", "#SS#", "####", "...#", "####"], "variants": {"Canonical (4\u00d77)": ["....", "####", "#..#", "#SS#", "####", "...#", "####"]}, "ink_count": 17, "shade_count": 2, "counter_xheight": 7, "ink_xheight": 13, "total_xheight": 20, "coverage_pct": 60.7, "contours_count": 2, "points_count": 12, "lr_symmetry_pct": 94, "tb_symmetry_pct": 82, "svg_ink": "M0 6H24V42H0V36H18V30H0ZM6 12V24H18V12Z", "svg_shadow": "M6 18H18V24H6Z", "svg_contours": [[[0, 6], [24, 6], [24, 42], [0, 42], [0, 36], [18, 36], [18, 30], [0, 30]], [[6, 12], [6, 24], [18, 24], [18, 12]]], "font_contours": [[[60, 600], [540, 600], [540, -120], [60, -120], [60, 0], [420, 0], [420, 120], [60, 120]], [[180, 480], [180, 240], [420, 240], [420, 480]]]}, "h": {"letter": "h", "codepoint": "U+0068 / U+0048", "origin": "Derived (n + left ascender at col 0, row 0)", "family": "Corner-stepped arch (n-family)", "rule": "Exact n glyph in rows 1..5 plus 1-module ascender at (col 0, row 0), following the o -> d/b ascender extension rule.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["#...", "###.", "#..#", "#SS#", "#SS#", "#SS#", "...."], "variants": {"Canonical (4\u00d77)": ["#...", "###.", "#..#", "#SS#", "#SS#", "#SS#", "...."]}, "ink_count": 12, "shade_count": 6, "counter_xheight": 9, "ink_xheight": 11, "total_xheight": 20, "coverage_pct": 42.9, "contours_count": 2, "points_count": 12, "lr_symmetry_pct": 83, "tb_symmetry_pct": 67, "svg_ink": "M0 0H6V6H18V12H6V36H0ZM18 12H24V36H18Z", "svg_shadow": "M6 18H18V36H6Z", "svg_contours": [[[0, 0], [6, 0], [6, 6], [18, 6], [18, 12], [6, 12], [6, 36], [0, 36]], [[18, 12], [24, 12], [24, 36], [18, 36]]], "font_contours": [[[60, 720], [180, 720], [180, 600], [420, 600], [420, 480], [180, 480], [180, 0], [60, 0]], [[420, 480], [540, 480], [540, 0], [420, 0]]]}, "i": {"letter": "i", "codepoint": "U+0069 / U+0049", "origin": "Derived (3\u00d77 symmetric serifed stem + ascender tittle)", "family": "Narrow symmetric stem (i/l, 3\u00d77)", "rule": "3-module width (3\u00d77): tittle at (col 1, row 0), 1-module gap at row 1, top-left flag at (col 0, row 2), stem down col 1 (rows 2..5), symmetric 3-module base at row 5, 2 shade modules at col 2, rows 3..4.", "grid_cols": 3, "grid_rows": 7, "advance_width": 480, "rows": [".#.", "...", "##.", ".#S", ".#S", "###", "..."], "variants": {"3\u00d77 Symmetric Serif": [".#.", "...", "##.", ".#S", ".#S", "###", "..."], "4\u00d77 Wide Foot": [".#..", "....", "##..", ".#SS", ".#SS", "####", "...."]}, "ink_count": 8, "shade_count": 2, "counter_xheight": 8, "ink_xheight": 7, "total_xheight": 15, "coverage_pct": 38.1, "contours_count": 2, "points_count": 14, "lr_symmetry_pct": 88, "tb_symmetry_pct": 50, "svg_ink": "M0 12H12V30H18V36H0V30H6V18H0ZM6 0H12V6H6Z", "svg_shadow": "M12 18H18V30H12Z", "svg_contours": [[[0, 12], [12, 12], [12, 30], [18, 30], [18, 36], [0, 36], [0, 30], [6, 30], [6, 18], [0, 18]], [[6, 0], [12, 0], [12, 6], [6, 6]]], "font_contours": [[[60, 480], [300, 480], [300, 120], [420, 120], [420, 0], [60, 0], [60, 120], [180, 120], [180, 360], [60, 360]], [[180, 720], [300, 720], [300, 600], [180, 600]]]}, "j": {"letter": "j", "codepoint": "U+006A / U+004A", "origin": "Derived (right-stemmed i with descender hook)", "family": "Descender hook (j)", "rule": "Tittle at (col 3, row 0), 1-module gap at row 1, top flag at (col 2, row 2), right stem down col 3 (rows 2..6), descender hook across row 6 with upturned tip at (col 0, row 5), 6 shade modules in cols 1..2, rows 3..5.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["...#", "....", "..##", ".SS#", ".SS#", "#SS#", "####"], "variants": {"Canonical (4\u00d77)": ["...#", "....", "..##", ".SS#", ".SS#", "#SS#", "####"]}, "ink_count": 11, "shade_count": 6, "counter_xheight": 14, "ink_xheight": 6, "total_xheight": 20, "coverage_pct": 39.3, "contours_count": 2, "points_count": 14, "lr_symmetry_pct": 55, "tb_symmetry_pct": 45, "svg_ink": "M0 30H6V36H18V18H12V12H24V42H0ZM18 0H24V6H18Z", "svg_shadow": "M6 18H18V36H6Z", "svg_contours": [[[0, 30], [6, 30], [6, 36], [18, 36], [18, 18], [12, 18], [12, 12], [24, 12], [24, 42], [0, 42]], [[18, 0], [24, 0], [24, 6], [18, 6]]], "font_contours": [[[60, 120], [180, 120], [180, 0], [420, 0], [420, 360], [300, 360], [300, 480], [540, 480], [540, -120], [60, -120]], [[420, 720], [540, 720], [540, 600], [420, 600]]]}, "k": {"letter": "k", "codepoint": "U+006B / U+004B", "origin": "Derived (ascender stem + n-style corner-stepped arm and leg)", "family": "Corner-stepped vertex (k/v/x/z)", "rule": "Left stem in col 0 (rows 0..5), midline junction bar at row 3 (cols 0..2), upper arm (col 3, rows 1..2) and lower leg (col 3, rows 4..5) connected via corner-touch at x=18 (like n). 4 shade modules in cols 1..2, rows 4..5.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["#...", "#..#", "#..#", "###.", "#SS#", "#SS#", "...."], "variants": {"Box-Stepped (n-Style)": ["#...", "#..#", "#..#", "###.", "#SS#", "#SS#", "...."], "Diagonal Staircase": ["#...", "#..#", "#.#.", "##..", "#S#.", "#SS#", "...."]}, "ink_count": 12, "shade_count": 4, "counter_xheight": 9, "ink_xheight": 11, "total_xheight": 20, "coverage_pct": 42.9, "contours_count": 3, "points_count": 16, "lr_symmetry_pct": 83, "tb_symmetry_pct": 67, "svg_ink": "M0 0H6V18H18V24H6V36H0ZM18 6H24V18H18ZM18 24H24V36H18Z", "svg_shadow": "M6 24H18V36H6Z", "svg_contours": [[[0, 0], [6, 0], [6, 18], [18, 18], [18, 24], [6, 24], [6, 36], [0, 36]], [[18, 6], [24, 6], [24, 18], [18, 18]], [[18, 24], [24, 24], [24, 36], [18, 36]]], "font_contours": [[[60, 720], [180, 720], [180, 360], [420, 360], [420, 240], [180, 240], [180, 0], [60, 0]], [[420, 600], [540, 600], [540, 360], [420, 360]], [[420, 240], [540, 240], [540, 0], [420, 0]]]}, "l": {"letter": "l", "codepoint": "U+006C / U+004C", "origin": "Derived (3\u00d77 continuous ascender stem with top flag & symmetric foot)", "family": "Narrow symmetric stem (i/l, 3\u00d77)", "rule": "3-module width (3\u00d77): top-left flag at row 0 (cols 0..1), stem down col 1 (rows 0..5), symmetric 3-module baseline foot at row 5, 2 shade modules at col 2, rows 3..4.", "grid_cols": 3, "grid_rows": 7, "advance_width": 480, "rows": ["##.", ".#.", ".#.", ".#S", ".#S", "###", "..."], "variants": {"3\u00d77 Symmetric Serif": ["##.", ".#.", ".#.", ".#S", ".#S", "###", "..."], "4\u00d77 Wide Foot": ["##..", ".#..", ".#..", ".#SS", ".#SS", "####", "...."]}, "ink_count": 9, "shade_count": 2, "counter_xheight": 8, "ink_xheight": 7, "total_xheight": 15, "coverage_pct": 42.9, "contours_count": 1, "points_count": 10, "lr_symmetry_pct": 89, "tb_symmetry_pct": 89, "svg_ink": "M0 0H12V30H18V36H0V30H6V6H0Z", "svg_shadow": "M12 18H18V30H12Z", "svg_contours": [[[0, 0], [12, 0], [12, 30], [18, 30], [18, 36], [0, 36], [0, 30], [6, 30], [6, 6], [0, 6]]], "font_contours": [[[60, 720], [300, 720], [300, 120], [420, 120], [420, 0], [60, 0], [60, 120], [180, 120], [180, 600], [60, 600]]]}, "m": {"letter": "m", "codepoint": "U+006D / U+004D", "origin": "Derived (5\u00d77 +1 module wide double-n arch)", "family": "Wide 3-stem pair (m/w, 5\u00d77)", "rule": "5-module width (+1 module rule for 3-stem legibility): three 1-module stems at cols 0, 2, 4 separated by two 1-module counters at cols 1 and 3, topped by n-style notched arch (row 1: ####.). 6 shade modules in cols 1 & 3, rows 3..5.", "grid_cols": 5, "grid_rows": 7, "advance_width": 720, "rows": [".....", "####.", "#.#.#", "#S#S#", "#S#S#", "#S#S#", "....."], "variants": {"5\u00d77 Double-N Arch (####.)": [".....", "####.", "#.#.#", "#S#S#", "#S#S#", "#S#S#", "....."], "5\u00d77 Stepped Twin-Arch (##.#.)": [".....", "##.#.", "#.#.#", "#S#S#", "#S#S#", "#S#S#", "....."], "5\u00d77 Symmetric Twin-Arch (.#.#.)": [".....", ".#.#.", "#.#.#", "#S#S#", "#S#S#", "#S#S#", "....."], "4\u00d77 Strict Grid": ["....", "#.#.", "##.#", "#SS#", "#SS#", "#SS#", "...."]}, "ink_count": 16, "shade_count": 6, "counter_xheight": 9, "ink_xheight": 16, "total_xheight": 25, "coverage_pct": 45.7, "contours_count": 2, "points_count": 14, "lr_symmetry_pct": 94, "tb_symmetry_pct": 81, "svg_ink": "M0 6H24V12H18V36H12V12H6V36H0ZM24 12H30V36H24Z", "svg_shadow": "M6 18H12V36H6ZM18 18H24V36H18Z", "svg_contours": [[[0, 6], [24, 6], [24, 12], [18, 12], [18, 36], [12, 36], [12, 12], [6, 12], [6, 36], [0, 36]], [[24, 12], [30, 12], [30, 36], [24, 36]]], "font_contours": [[[60, 600], [540, 600], [540, 480], [420, 480], [420, 0], [300, 0], [300, 480], [180, 480], [180, 0], [60, 0]], [[540, 480], [660, 480], [660, 0], [540, 0]]]}, "n": {"letter": "n", "codepoint": "U+006E / U+004E", "origin": "OpenCode wordmark (No. 004)", "family": "Corner-stepped arch (n-family)", "rule": "Left stem in col 0 (rows 1..5) with top bar cols 0..2 (notched at col 3, row 1), corner-touching right stem in col 3 (rows 2..5) at vertex (18, 12). 6 shade modules in cols 1..2, rows 3..5.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "###.", "#..#", "#SS#", "#SS#", "#SS#", "...."], "variants": {"Canonical (4\u00d77)": ["....", "###.", "#..#", "#SS#", "#SS#", "#SS#", "...."]}, "ink_count": 11, "shade_count": 6, "counter_xheight": 9, "ink_xheight": 11, "total_xheight": 20, "coverage_pct": 39.3, "contours_count": 2, "points_count": 10, "lr_symmetry_pct": 91, "tb_symmetry_pct": 73, "svg_ink": "M18 12H6V36H0V6H18V12ZM24 36H18V12H24V36Z", "svg_shadow": "M18 36H6V18H18V36Z", "svg_contours": [[[0, 6], [18, 6], [18, 12], [6, 12], [6, 36], [0, 36]], [[18, 12], [24, 12], [24, 36], [18, 36]]], "font_contours": [[[60, 600], [420, 600], [420, 480], [180, 480], [180, 0], [60, 0]], [[420, 480], [540, 480], [540, 0], [420, 0]]]}, "o": {"letter": "o", "codepoint": "U+006F / U+004F", "origin": "OpenCode wordmark (No. 001)", "family": "Bowl + stem quartet (o/p/d/b/q)", "rule": "Canonical 4x5 x-height ring (rows 1..5, cols 0..3) enclosing a 2x3 counter (cols 1..2, rows 2..4) with 4 shade modules in the lower counter (cols 1..2, rows 3..4).", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "####", "#..#", "#SS#", "#SS#", "####", "...."], "variants": {"Canonical (4\u00d77)": ["....", "####", "#..#", "#SS#", "#SS#", "####", "...."]}, "ink_count": 14, "shade_count": 4, "counter_xheight": 6, "ink_xheight": 14, "total_xheight": 20, "coverage_pct": 50.0, "contours_count": 2, "points_count": 8, "lr_symmetry_pct": 100, "tb_symmetry_pct": 100, "svg_ink": "M18 12H6V30H18V12ZM24 36H0V6H24V36Z", "svg_shadow": "M18 30H6V18H18V30Z", "svg_contours": [[[0, 6], [24, 6], [24, 36], [0, 36]], [[6, 12], [6, 30], [18, 30], [18, 12]]], "font_contours": [[[60, 600], [540, 600], [540, 0], [60, 0]], [[180, 480], [180, 120], [420, 120], [420, 480]]]}, "p": {"letter": "p", "codepoint": "U+0070 / U+0050", "origin": "OpenCode wordmark (No. 002)", "family": "Bowl + stem quartet (o/p/d/b/q)", "rule": "Canonical o-bowl in rows 1..5 plus 1-module descender at (col 0, row 6). Shade fills lower counter (cols 1..2, rows 3..4).", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "####", "#..#", "#SS#", "#SS#", "####", "#..."], "variants": {"Canonical (4\u00d77)": ["....", "####", "#..#", "#SS#", "#SS#", "####", "#..."]}, "ink_count": 15, "shade_count": 4, "counter_xheight": 6, "ink_xheight": 14, "total_xheight": 20, "coverage_pct": 53.6, "contours_count": 2, "points_count": 10, "lr_symmetry_pct": 93, "tb_symmetry_pct": 67, "svg_ink": "M6 30H18V12H6V30ZM24 36H6V42H0V6H24V36Z", "svg_shadow": "M18 30H6V18H18V30Z", "svg_contours": [[[0, 6], [24, 6], [24, 36], [6, 36], [6, 42], [0, 42]], [[6, 12], [6, 30], [18, 30], [18, 12]]], "font_contours": [[[60, 600], [540, 600], [540, 0], [180, 0], [180, -120], [60, -120]], [[180, 480], [180, 120], [420, 120], [420, 480]]]}, "q": {"letter": "q", "codepoint": "U+0071 / U+0051", "origin": "Derived (horizontal mirror of p / vertical mirror of d)", "family": "Bowl + stem quartet (o/p/d/b/q)", "rule": "Canonical o-bowl in rows 1..5 plus 1-module descender at (col 3, row 6). Shade fills lower counter (cols 1..2, rows 3..4).", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "####", "#..#", "#SS#", "#SS#", "####", "...#"], "variants": {"Canonical (4\u00d77)": ["....", "####", "#..#", "#SS#", "#SS#", "####", "...#"]}, "ink_count": 15, "shade_count": 4, "counter_xheight": 6, "ink_xheight": 14, "total_xheight": 20, "coverage_pct": 53.6, "contours_count": 2, "points_count": 10, "lr_symmetry_pct": 93, "tb_symmetry_pct": 67, "svg_ink": "M0 6H24V42H18V36H0ZM6 12V30H18V12Z", "svg_shadow": "M6 18H18V30H6Z", "svg_contours": [[[0, 6], [24, 6], [24, 42], [18, 42], [18, 36], [0, 36]], [[6, 12], [6, 30], [18, 30], [18, 12]]], "font_contours": [[[60, 600], [540, 600], [540, -120], [420, -120], [420, 0], [60, 0]], [[180, 480], [180, 120], [420, 120], [420, 480]]]}, "r": {"letter": "r", "codepoint": "U+0072 / U+0052", "origin": "Derived (n-arch with open lower right side)", "family": "Corner-stepped arch (n-family)", "rule": "Identical top arch and corner-stepped right terminal to n in rows 1..2 (col 3, row 2 ear), with lower right stem removed in rows 3..5. 6 shade modules in cols 1..2, rows 3..5.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "###.", "#..#", "#SS.", "#SS.", "#SS.", "...."], "variants": {"Canonical (4\u00d77)": ["....", "###.", "#..#", "#SS.", "#SS.", "#SS.", "...."]}, "ink_count": 8, "shade_count": 6, "counter_xheight": 12, "ink_xheight": 8, "total_xheight": 20, "coverage_pct": 28.6, "contours_count": 2, "points_count": 10, "lr_symmetry_pct": 50, "tb_symmetry_pct": 62, "svg_ink": "M0 6H18V12H6V36H0ZM18 12H24V18H18Z", "svg_shadow": "M6 18H18V36H6Z", "svg_contours": [[[0, 6], [18, 6], [18, 12], [6, 12], [6, 36], [0, 36]], [[18, 12], [24, 12], [24, 18], [18, 18]]], "font_contours": [[[60, 600], [420, 600], [420, 480], [180, 480], [180, 0], [60, 0]], [[420, 480], [540, 480], [540, 360], [420, 360]]]}, "s": {"letter": "s", "codepoint": "U+0073 / U+0053", "origin": "Derived (3-bar serpentine x-height contour)", "family": "Double-storey x-height (e-family)", "rule": "Top bar (row 1), upper-left connector (col 0, row 2), midline bar (row 3), lower-right connector (col 3, row 4), bottom bar (row 5). 3 shade modules in lower counter (cols 0..2, row 4), mirroring e.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "####", "#...", "####", "SSS#", "####", "...."], "variants": {"Canonical (4\u00d77)": ["....", "####", "#...", "####", "SSS#", "####", "...."]}, "ink_count": 14, "shade_count": 3, "counter_xheight": 6, "ink_xheight": 14, "total_xheight": 20, "coverage_pct": 50.0, "contours_count": 1, "points_count": 12, "lr_symmetry_pct": 86, "tb_symmetry_pct": 86, "svg_ink": "M0 6H24V12H6V18H24V36H0V30H18V24H0Z", "svg_shadow": "M0 24H18V30H0Z", "svg_contours": [[[0, 6], [24, 6], [24, 12], [6, 12], [6, 18], [24, 18], [24, 36], [0, 36], [0, 30], [18, 30], [18, 24], [0, 24]]], "font_contours": [[[60, 600], [540, 600], [540, 480], [180, 480], [180, 360], [540, 360], [540, 0], [60, 0], [60, 120], [420, 120], [420, 240], [60, 240]]]}, "t": {"letter": "t", "codepoint": "U+0074 / U+0054", "origin": "Derived (ascender stem + symmetric x-height crossbar + baseline hook)", "family": "Ascender crossbar pair (f/t)", "rule": "Ascender tip at (col 1, row 0), symmetric 3-module crossbar at x-height row 1 (cols 0..2), stem down col 1 to baseline hook at row 5 (cols 1..3). 4 shade modules in cols 2..3, rows 3..4.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": [".#..", "###.", ".#..", ".#SS", ".#SS", ".###", "...."], "variants": {"Trim Crossbar (###.)": [".#..", "###.", ".#..", ".#SS", ".#SS", ".###", "...."], "Full 4-Col Crossbar (####)": [".#..", "####", ".#..", ".#SS", ".#SS", ".###", "...."]}, "ink_count": 10, "shade_count": 4, "counter_xheight": 11, "ink_xheight": 9, "total_xheight": 20, "coverage_pct": 35.7, "contours_count": 1, "points_count": 14, "lr_symmetry_pct": 40, "tb_symmetry_pct": 60, "svg_ink": "M0 6H6V0H12V6H18V12H12V30H24V36H6V12H0Z", "svg_shadow": "M12 18H24V30H12Z", "svg_contours": [[[0, 6], [6, 6], [6, 0], [12, 0], [12, 6], [18, 6], [18, 12], [12, 12], [12, 30], [24, 30], [24, 36], [6, 36], [6, 12], [0, 12]]], "font_contours": [[[60, 600], [180, 600], [180, 720], [300, 720], [300, 600], [420, 600], [420, 480], [300, 480], [300, 120], [540, 120], [540, 0], [180, 0], [180, 480], [60, 480]]]}, "u": {"letter": "u", "codepoint": "U+0075 / U+0055", "origin": "Derived (180\u00b0 rotation of n)", "family": "Corner-stepped arch (n-family)", "rule": "Exact 180\u00b0 inversion of n: left stem in col 0 (rows 1..4) notched at bottom-left (col 0, row 5), corner-touching bottom bar (cols 1..3, row 5) and full right stem in col 3 (rows 1..5). 4 shade modules in cols 1..2, rows 3..4.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "#..#", "#..#", "#SS#", "#SS#", ".###", "...."], "variants": {"Canonical (4\u00d77)": ["....", "#..#", "#..#", "#SS#", "#SS#", ".###", "...."]}, "ink_count": 11, "shade_count": 4, "counter_xheight": 9, "ink_xheight": 11, "total_xheight": 20, "coverage_pct": 39.3, "contours_count": 2, "points_count": 10, "lr_symmetry_pct": 91, "tb_symmetry_pct": 73, "svg_ink": "M0 6H6V30H0ZM6 30H18V6H24V36H6Z", "svg_shadow": "M6 18H18V30H6Z", "svg_contours": [[[0, 6], [6, 6], [6, 30], [0, 30]], [[6, 30], [18, 30], [18, 6], [24, 6], [24, 36], [6, 36]]], "font_contours": [[[60, 600], [180, 600], [180, 120], [60, 120]], [[180, 120], [420, 120], [420, 600], [540, 600], [540, 0], [180, 0]]]}, "v": {"letter": "v", "codepoint": "U+0076 / U+0056", "origin": "Derived (symmetric corner-stepped convergence at baseline)", "family": "Corner-stepped vertex (k/v/x/z)", "rule": "Symmetric outer walls in cols 0 and 3 (rows 1..4) stepping via corner-touches at (6, 30) and (18, 30) into centered 2-module vertex (cols 1..2, row 5). 4 shade modules in cols 1..2, rows 3..4.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "#..#", "#..#", "#SS#", "#SS#", ".##.", "...."], "variants": {"Canonical (4\u00d77)": ["....", "#..#", "#..#", "#SS#", "#SS#", ".##.", "...."]}, "ink_count": 10, "shade_count": 4, "counter_xheight": 10, "ink_xheight": 10, "total_xheight": 20, "coverage_pct": 35.7, "contours_count": 3, "points_count": 12, "lr_symmetry_pct": 100, "tb_symmetry_pct": 60, "svg_ink": "M0 6H6V30H0ZM6 30H18V36H6ZM18 6H24V30H18Z", "svg_shadow": "M6 18H18V30H6Z", "svg_contours": [[[0, 6], [6, 6], [6, 30], [0, 30]], [[6, 30], [18, 30], [18, 36], [6, 36]], [[18, 6], [24, 6], [24, 30], [18, 30]]], "font_contours": [[[60, 600], [180, 600], [180, 120], [60, 120]], [[180, 120], [420, 120], [420, 0], [180, 0]], [[420, 600], [540, 600], [540, 120], [420, 120]]]}, "w": {"letter": "w", "codepoint": "U+0077 / U+0057", "origin": "Derived (5\u00d77 +1 module wide twin-vertex double-v)", "family": "Wide 3-stem pair (m/w, 5\u00d77)", "rule": "5-module width (+1 module rule for unmistakable w legibility): outer walls at cols 0 and 4 (rows 1..4), recessed central spire at col 2 (rows 2..4), converging via corner-touches into twin baseline vertices at cols 1 and 3 (row 5: .#.#.). 4 shade modules in cols 1 & 3, rows 3..4.", "grid_cols": 5, "grid_rows": 7, "advance_width": 720, "rows": [".....", "#...#", "#.#.#", "#S#S#", "#S#S#", ".#.#.", "....."], "variants": {"5\u00d77 Twin-Vertex (Recessed Peak)": [".....", "#...#", "#.#.#", "#S#S#", "#S#S#", ".#.#.", "....."], "5\u00d77 Twin-Vertex (Full Peak)": [".....", "#.#.#", "#.#.#", "#S#S#", "#S#S#", ".#.#.", "....."], "5\u00d77 Notched Base (.###.)": [".....", "#...#", "#.#.#", "#S#S#", "#S#S#", ".###.", "....."], "5\u00d77 Double-U (.####)": [".....", "#.#.#", "#.#.#", "#S#S#", "#S#S#", ".####", "....."], "4\u00d77 Strict Grid": ["....", "#..#", "#..#", "#SS#", "#S##", ".#.#", "...."]}, "ink_count": 13, "shade_count": 4, "counter_xheight": 12, "ink_xheight": 13, "total_xheight": 25, "coverage_pct": 37.1, "contours_count": 5, "points_count": 20, "lr_symmetry_pct": 100, "tb_symmetry_pct": 69, "svg_ink": "M0 6H6V30H0ZM6 30H12V36H6ZM12 12H18V30H12ZM18 30H24V36H18ZM24 6H30V30H24Z", "svg_shadow": "M6 18H12V30H6ZM18 18H24V30H18Z", "svg_contours": [[[0, 6], [6, 6], [6, 30], [0, 30]], [[6, 30], [12, 30], [12, 36], [6, 36]], [[12, 12], [18, 12], [18, 30], [12, 30]], [[18, 30], [24, 30], [24, 36], [18, 36]], [[24, 6], [30, 6], [30, 30], [24, 30]]], "font_contours": [[[60, 600], [180, 600], [180, 120], [60, 120]], [[180, 120], [300, 120], [300, 0], [180, 0]], [[300, 480], [420, 480], [420, 120], [300, 120]], [[420, 120], [540, 120], [540, 0], [420, 0]], [[540, 600], [660, 600], [660, 120], [540, 120]]]}, "x": {"letter": "x", "codepoint": "U+0078 / U+0058", "origin": "Derived (4-way symmetric corner-stepped crossover)", "family": "Corner-stepped vertex (k/v/x/z)", "rule": "Upper legs (cols 0, 3 in rows 1..2) and lower legs (cols 0, 3 in rows 4..5) meeting via 4 corner-touches at central 2-module midline bridge (cols 1..2, row 3). 4 shade modules in cols 1..2, rows 4..5.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "#..#", "#..#", ".##.", "#SS#", "#SS#", "...."], "variants": {"Canonical (4\u00d77)": ["....", "#..#", "#..#", ".##.", "#SS#", "#SS#", "...."]}, "ink_count": 10, "shade_count": 4, "counter_xheight": 10, "ink_xheight": 10, "total_xheight": 20, "coverage_pct": 35.7, "contours_count": 5, "points_count": 20, "lr_symmetry_pct": 100, "tb_symmetry_pct": 100, "svg_ink": "M0 6H6V18H0ZM0 24H6V36H0ZM6 18H18V24H6ZM18 6H24V18H18ZM18 24H24V36H18Z", "svg_shadow": "M6 24H18V36H6Z", "svg_contours": [[[0, 6], [6, 6], [6, 18], [0, 18]], [[0, 24], [6, 24], [6, 36], [0, 36]], [[6, 18], [18, 18], [18, 24], [6, 24]], [[18, 6], [24, 6], [24, 18], [18, 18]], [[18, 24], [24, 24], [24, 36], [18, 36]]], "font_contours": [[[60, 600], [180, 600], [180, 360], [60, 360]], [[60, 240], [180, 240], [180, 0], [60, 0]], [[180, 360], [420, 360], [420, 240], [180, 240]], [[420, 600], [540, 600], [540, 360], [420, 360]], [[420, 240], [540, 240], [540, 0], [420, 0]]]}, "y": {"letter": "y", "codepoint": "U+0079 / U+0059", "origin": "Derived (u-cup in rows 1..4 + g-descender hook in rows 5..6)", "family": "Descender loop (g/y)", "rule": "Open-top u-cup in rows 1..4 (notched at col 0, row 4 via corner-touch at (6, 24), shaded at row 3, cols 1..2), right stem descending through row 5 into full descender hook at row 6.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "#..#", "#..#", "#SS#", ".###", "...#", "####"], "variants": {"Canonical (4\u00d77)": ["....", "#..#", "#..#", "#SS#", ".###", "...#", "####"]}, "ink_count": 14, "shade_count": 2, "counter_xheight": 10, "ink_xheight": 10, "total_xheight": 20, "coverage_pct": 50.0, "contours_count": 2, "points_count": 14, "lr_symmetry_pct": 86, "tb_symmetry_pct": 57, "svg_ink": "M0 6H6V24H0ZM0 36H18V30H6V24H18V6H24V42H0Z", "svg_shadow": "M6 18H18V24H6Z", "svg_contours": [[[0, 6], [6, 6], [6, 24], [0, 24]], [[0, 36], [18, 36], [18, 30], [6, 30], [6, 24], [18, 24], [18, 6], [24, 6], [24, 42], [0, 42]]], "font_contours": [[[60, 600], [180, 600], [180, 240], [60, 240]], [[60, 0], [420, 0], [420, 120], [180, 120], [180, 240], [420, 240], [420, 600], [540, 600], [540, -120], [60, -120]]]}, "z": {"letter": "z", "codepoint": "U+007A / U+005A", "origin": "Derived (corner-stepped diagonal bridge across 3-row interior)", "family": "Corner-stepped vertex (k/v/x/z)", "rule": "Top bar at row 1, upper-right drop at (col 3, row 2), corner-stepped center bridge at row 3 (cols 1..2), lower-left drop at (col 0, row 4), bottom bar at row 5. 3 shade modules in cols 1..3, row 4.", "grid_cols": 4, "grid_rows": 7, "advance_width": 600, "rows": ["....", "####", "...#", ".##.", "#SSS", "####", "...."], "variants": {"Canonical (4\u00d77)": ["....", "####", "...#", ".##.", "#SSS", "####", "...."]}, "ink_count": 12, "shade_count": 3, "counter_xheight": 8, "ink_xheight": 12, "total_xheight": 20, "coverage_pct": 42.9, "contours_count": 3, "points_count": 16, "lr_symmetry_pct": 83, "tb_symmetry_pct": 83, "svg_ink": "M0 6H24V18H18V12H0ZM0 24H6V30H24V36H0ZM6 18H18V24H6Z", "svg_shadow": "M6 24H24V30H6Z", "svg_contours": [[[0, 6], [24, 6], [24, 18], [18, 18], [18, 12], [0, 12]], [[0, 24], [6, 24], [6, 30], [24, 30], [24, 36], [0, 36]], [[6, 18], [18, 18], [18, 24], [6, 24]]], "font_contours": [[[60, 600], [540, 600], [540, 360], [420, 360], [420, 480], [60, 480]], [[60, 240], [180, 240], [180, 120], [540, 120], [540, 0], [60, 0]], [[180, 360], [420, 360], [420, 240], [180, 240]]]}};
+const ORIG_SET = new Set(["o", "p", "e", "n", "c", "d"]);
+const LETTERS = Object.keys(GLYPHS).sort();
+let currentLetter = "w";
+
+function createLetterSVGFromRows(rows, modPx = 11) {
+  const gcols = rows[0].length;
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", `0 0 ${gcols * 6} 42`);
+  svg.style.width = (gcols * modPx) + "px";
+  svg.style.height = (7 * modPx) + "px";
+  let rects = "";
+  for (let r = 0; r < 7; r++) {
+    for (let c = 0; c < gcols; c++) {
+      const ch = rows[r][c];
+      if (ch === "S") {
+        rects += `<rect x="${c*6}" y="${r*6}" width="6" height="6" fill="#3d3d3d"/>`;
+      } else if (ch === "#") {
+        rects += `<rect x="${c*6}" y="${r*6}" width="6" height="6" fill="#f5f5f5"/>`;
+      }
+    }
+  }
+  svg.innerHTML = rects;
+  return svg;
+}
+
+function renderHero(text) {
+  const stage = document.getElementById("heroStage");
+  stage.innerHTML = "";
+  const lines = text.split(/\n/);
+  const modPx = lines.some(l => l.length > 22) ? 8 : 12;
+  for (const line of lines) {
+    const row = document.createElement("div");
+    row.className = "word-row";
+    row.style.gap = modPx + "px";
+    for (const ch of line.toLowerCase()) {
+      if (ch === " ") {
+        const sp = document.createElement("div");
+        sp.style.width = (2.5 * modPx) + "px";
+        row.appendChild(sp);
+        continue;
+      }
+      if (!GLYPHS[ch]) continue;
+      row.appendChild(createLetterSVGFromRows(GLYPHS[ch].rows, modPx));
+    }
+    stage.appendChild(row);
+  }
+}
+
+renderHero(document.getElementById("heroInput").value);
+
+document.getElementById("heroInput").addEventListener("input", e => {
+  renderHero(e.target.value);
+});
+
+document.querySelectorAll(".hero-controls .pill").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".hero-controls .pill").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    const t = btn.getAttribute("data-text");
+    document.getElementById("heroInput").value = t;
+    renderHero(t);
+  });
+});
+
+// Recompute stats when a glyph grid is modified in the live editor
+function recomputeGlyphMetrics(g) {
+  const rows = g.rows;
+  const gcols = rows[0].length;
+  g.grid_cols = gcols;
+  g.advance_width = gcols * 120 + 120;
+  let ink = 0, shade = 0, inkXh = 0;
+  for (let r = 0; r < 7; r++) {
+    for (let c = 0; c < gcols; c++) {
+      if (rows[r][c] === "#") {
+        ink++;
+        if (r >= 1 && r <= 5) inkXh++;
+      } else if (rows[r][c] === "S") {
+        shade++;
+      }
+    }
+  }
+  g.ink_count = ink;
+  g.shade_count = shade;
+  g.ink_xheight = inkXh;
+  g.total_xheight = gcols * 5;
+  g.counter_xheight = g.total_xheight - inkXh;
+  g.coverage_pct = ((100 * ink) / (gcols * 7)).toFixed(1);
+}
+
+const picker = document.getElementById("letterPicker");
+LETTERS.forEach(l => {
+  const b = document.createElement("button");
+  const isOrig = ORIG_SET.has(l);
+  const isWide = GLYPHS[l].grid_cols !== 4;
+  b.className = "l-btn" + (isOrig ? " orig" : (isWide ? " wide" : "")) + (l === currentLetter ? " active" : "");
+  b.textContent = l;
+  b.addEventListener("click", () => {
+    currentLetter = l;
+    document.querySelectorAll(".l-btn").forEach(x => x.classList.remove("active"));
+    b.classList.add("active");
+    updateLab();
+  });
+  picker.appendChild(b);
+});
+
+[3, 4, 5].forEach(targetCols => {
+  document.getElementById("wBtn" + targetCols).addEventListener("click", () => {
+    const g = GLYPHS[currentLetter];
+    const curCols = g.rows[0].length;
+    if (curCols === targetCols) return;
+    g.rows = g.rows.map(r => {
+      if (targetCols > curCols) return r + ".".repeat(targetCols - curCols);
+      return r.slice(0, targetCols);
+    });
+    recomputeGlyphMetrics(g);
+    updateLab();
+    renderHero(document.getElementById("heroInput").value);
+    renderPassports(currentFilter);
+  });
+});
+
+document.getElementById("isoSlider").addEventListener("input", () => drawIsometric(GLYPHS[currentLetter]));
+
+function updateLab() {
+  const g = GLYPHS[currentLetter];
+  const gcols = g.rows[0].length;
+  const isOrig = ORIG_SET.has(currentLetter);
+  document.getElementById("consTitle").textContent =
+    `Letter  (${gcols}×7 Grid · ${g.advance_width}u advance) · ${isOrig ? "Original Wordmark" : "Completed / Editable"}`;
+
+  [3, 4, 5].forEach(c => {
+    document.getElementById("wBtn" + c).classList.toggle("active", gcols === c);
+  });
+
+  // Render variant buttons
+  const vBar = document.getElementById("variantBar");
+  vBar.innerHTML = "";
+  const variants = g.variants || {};
+  Object.keys(variants).forEach(vName => {
+    const btn = document.createElement("button");
+    const matches = JSON.stringify(variants[vName]) === JSON.stringify(g.rows);
+    btn.className = "pill" + (matches ? " active" : "");
+    btn.textContent = vName;
+    btn.addEventListener("click", () => {
+      g.rows = [...variants[vName]];
+      recomputeGlyphMetrics(g);
+      updateLab();
+      renderHero(document.getElementById("heroInput").value);
+      renderPassports(currentFilter);
+    });
+    vBar.appendChild(btn);
+  });
+
+  const svg = document.getElementById("consSvg");
+  svg.setAttribute("viewBox", `-4 -3 ${gcols * 6 + 8} 48`);
+  let svgHtml = "";
+
+  // Interactive cells
+  for (let r = 0; r < 7; r++) {
+    for (let c = 0; c < gcols; c++) {
+      const ch = g.rows[r][c];
+      const fill = ch === "#" ? "#f5f5f5" : (ch === "S" ? "#3d3d3d" : "#0b0b0b");
+      svgHtml += `<rect data-r="${r}" data-c="${c}" x="${c*6}" y="${r*6}" width="6" height="6" fill="${fill}" stroke="#222" stroke-width="0.3"/>`;
+    }
+  }
+  // Metric lines (x-height top y=6, baseline y=36)
+  svgHtml += `<g stroke="#3b82f6" stroke-width="0.4" stroke-dasharray="1 1" pointer-events="none">
+    <line x1="-2" y1="6" x2="${gcols*6+2}" y2="6"/>
+    <line x1="-2" y1="36" x2="${gcols*6+2}" y2="36"/>
+  </g>`;
+  svg.innerHTML = svgHtml;
+
+  svg.querySelectorAll("rect[data-r]").forEach(rect => {
+    rect.addEventListener("click", () => {
+      const r = Number(rect.getAttribute("data-r"));
+      const c = Number(rect.getAttribute("data-c"));
+      const cur = g.rows[r][c];
+      const next = cur === "." ? "#" : (cur === "#" ? "S" : ".");
+      const rowArr = g.rows[r].split("");
+      rowArr[c] = next;
+      g.rows[r] = rowArr.join("");
+      recomputeGlyphMetrics(g);
+      updateLab();
+      renderHero(document.getElementById("heroInput").value);
+      renderPassports(currentFilter);
+    });
+  });
+
+  document.getElementById("consInfo").innerHTML = `
+    <div style="font-size:12px;line-height:1.75;color:var(--muted);margin-bottom:12px;">
+      <div><strong style="color:var(--ink);">Family:</strong> ${g.family}</div>
+      <div><strong style="color:var(--ink);">Grid Dimensions:</strong> ${gcols} × 7 modules (${gcols * 120}u × 840u)</div>
+      <div><strong style="color:var(--ink);">Advance Width:</strong> ${g.advance_width}u (60u LSB + ${gcols * 120}u + 60u RSB)</div>
+      <div><strong style="color:var(--ink);">Ink / Shade:</strong> ${g.ink_count} ink + ${g.shade_count} shade (${g.coverage_pct}%)</div>
+      <div><strong style="color:var(--ink);">x-Height Law:</strong> ${g.ink_xheight} ink + ${g.counter_xheight} counter = ${g.total_xheight}</div>
+    </div>
+    <div style="font-size:11px;color:#b5b5b5;padding:12px;background:#080808;border:1px solid var(--border);margin-bottom:12px;line-height:1.5;">
+      ${g.rule}
+    </div>
+    <div style="font-size:11px;color:var(--wide);">
+      Tip: Click any square on the blueprint grid to cycle Empty → Ink → Shade, or switch preset variants above.
+    </div>
+  `;
+
+  drawIsometric(g);
+}
+
+function drawIsometric(g) {
+  const canvas = document.getElementById("isoCanvas");
+  const ctx = canvas.getContext("2d");
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const lift = Number(document.getElementById("isoSlider").value) / 100;
+  const gcols = g.rows[0].length;
+
+  const tileW = 25;
+  const tileH = 14.5;
+  const originX = 270;
+  const originY = 120;
+
+  function isoProject(c, r, z) {
+    return [originX + (c - r) * tileW, originY + (c + r) * tileH - z];
+  }
+
+  function drawSlab(c, r, z, thickness, topCol, leftCol, rightCol) {
+    const [x0, y0] = isoProject(c, r, z);
+    const [x1, y1] = isoProject(c + 1, r, z);
+    const [x2, y2] = isoProject(c + 1, r + 1, z);
+    const [x3, y3] = isoProject(c, r + 1, z);
+
+    ctx.beginPath();
+    ctx.moveTo(x0, y0); ctx.lineTo(x1, y1); ctx.lineTo(x2, y2); ctx.lineTo(x3, y3);
+    ctx.closePath();
+    ctx.fillStyle = topCol;
+    ctx.fill();
+    ctx.strokeStyle = "#181818";
+    ctx.stroke();
+
+    if (thickness > 0) {
+      ctx.beginPath();
+      ctx.moveTo(x3, y3); ctx.lineTo(x2, y2);
+      ctx.lineTo(x2, y2 + thickness); ctx.lineTo(x3, y3 + thickness);
+      ctx.closePath();
+      ctx.fillStyle = leftCol;
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(x1, y1); ctx.lineTo(x2, y2);
+      ctx.lineTo(x2, y2 + thickness); ctx.lineTo(x1, y1 + thickness);
+      ctx.closePath();
+      ctx.fillStyle = rightCol;
+      ctx.fill();
+    }
+  }
+
+  for (let r = 0; r < 7; r++) {
+    for (let c = 0; c < gcols; c++) {
+      drawSlab(c, r, 0, 0, "#121212", "#0d0d0d", "#0d0d0d");
+    }
+  }
+  for (let r = 0; r < 7; r++) {
+    for (let c = 0; c < gcols; c++) {
+      const ch = g.rows[r][c];
+      if (ch === "S") {
+        drawSlab(c, r, lift * (22 + (6 - r) * 6), 8, "#4a4a4a", "#333333", "#262626");
+      } else if (ch === "#") {
+        drawSlab(c, r, lift * (52 + (6 - r) * 11), 12, "#f5f5f5", "#bdbdbd", "#8c8c8c");
+      }
+    }
+  }
+}
+
+let currentFilter = "all";
+function renderPassports(filter = "all") {
+  currentFilter = filter;
+  const container = document.getElementById("passportGrid");
+  container.innerHTML = "";
+  LETTERS.forEach((letter, idx) => {
+    const isOrig = ORIG_SET.has(letter);
+    const g = GLYPHS[letter];
+    const gcols = g.rows[0].length;
+    const isProp = gcols !== 4;
+    if (filter === "orig" && !isOrig) return;
+    if (filter === "wide" && !isProp) return;
+    if (filter === "new" && isOrig) return;
+
+    const card = document.createElement("article");
+    card.className = "card" + (isOrig ? " orig" : (isProp ? " wide" : ""));
+
+    let cellsSvg = "";
+    for (let r = 0; r < 7; r++) {
+      for (let c = 0; c < gcols; c++) {
+        const ch = g.rows[r][c];
+        const fill = ch === "#" ? "#f5f5f5" : (ch === "S" ? "#3d3d3d" : "none");
+        cellsSvg += `<rect x="${c*6}" y="${r*6}" width="6" height="6" fill="${fill}" stroke="#1e1e1e" stroke-width="0.35"/>`;
+      }
+    }
+
+    const badgeClass = isOrig ? "orig" : (isProp ? "wide" : "new");
+    const badgeText = isOrig ? "ORIGINAL 4×7" : (gcols === 5 ? "5×7 (+1 WIDE)" : (gcols === 3 ? "3×7 (TRIM)" : "COMPLETED 4×7"));
+
+    card.innerHTML = `
+      <div class="card-head">
+        <span>No. ${String(idx + 1).padStart(3, "0")} · <strong style="font-size:15px;">${letter}</strong> (${gcols}×7)</span>
+        <span class="badge ${badgeClass}">${badgeText}</span>
+      </div>
+      <div class="card-body">
+        <svg class="passport-svg" viewBox="-4 -3 ${gcols*6+8} 48">
+          ${cellsSvg}
+          <line x1="-2" y1="6" x2="${gcols*6+2}" y2="6" stroke="#444" stroke-width="0.4" stroke-dasharray="1 1"/>
+          <line x1="-2" y1="36" x2="${gcols*6+2}" y2="36" stroke="#444" stroke-width="0.4" stroke-dasharray="1 1"/>
+        </svg>
+        <div class="kv-list">
+          <div>Grid: <strong>${gcols} × 7 (${g.advance_width}u)</strong></div>
+          <div>Ink / Shade: <strong>${g.ink_count} / ${g.shade_count}</strong></div>
+          <div>Coverage: <strong>${g.coverage_pct}%</strong></div>
+          <div>x-Height: <strong>${g.ink_xheight} + ${g.counter_xheight} = ${g.total_xheight}</strong></div>
+          <div>Symmetry: <strong>${g.lr_symmetry_pct}% · ${g.tb_symmetry_pct}%</strong></div>
+        </div>
+      </div>
+      <div class="rule-desc">${g.rule}</div>
+    `;
+    card.addEventListener("click", () => {
+      currentLetter = letter;
+      document.querySelectorAll(".l-btn").forEach(b => {
+        b.classList.toggle("active", b.textContent === letter);
+      });
+      updateLab();
+      document.getElementById("construction").scrollIntoView({ behavior: "smooth" });
+    });
+    container.appendChild(card);
+  });
+}
+
+updateLab();
+renderPassports("all");
+
+document.querySelectorAll("#filterPills .pill").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("#filterPills .pill").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    renderPassports(btn.getAttribute("data-filter"));
+  });
+});
+
+const wfContainer = document.getElementById("waterfallContainer");
+[14, 21, 28, 35, 42, 56].forEach(px => {
+  const div = document.createElement("div");
+  div.className = "waterfall-row";
+  div.innerHTML = `
+    <span class="wf-size">${px}px</span>
+    <span class="wf-text" style="font-size:${px}px;">the quick brown fox jumps over the lazy dog</span>
+  `;
+  wfContainer.appendChild(div);
+});
+</script>
+</body>
+</html>
